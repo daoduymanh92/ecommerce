@@ -31,16 +31,16 @@
         </div>
 
         <div class="row">
-            @foreach($items as $item)
+            @foreach($products as $product)
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                  <a href="#"><img class="card-img-top" src="{{ $item['image'] }}" alt=""></a>
+                  <a href="#"><img class="card-img-top" src="{{ $product->thumbnail }}" alt=""></a>
                   <div class="card-body">
                     <h4 class="card-title">
-                      <a href="#">{{$item['title']}}</a>
+                      <a href="#">{{$product->name}}</a>
                     </h4>
-                    <h5>{{$item['price']}}</h5>
-                    <p class="card-text">{{$item['content']}}</p>
+                    <h5>{{ $product->price }}</h5>
+                    <p class="card-text">{{ $product->description }}</p>
                   </div>
                   <div class="card-footer">
                     <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
